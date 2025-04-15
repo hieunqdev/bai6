@@ -32,4 +32,59 @@ public class KhoaHoc {
     @Column(name = "NgayKetThuc")
     @Temporal(TemporalType.DATE)
     private Date NgayKetThuc;
+
+	public KhoaHoc() {
+		super();
+	}
+
+	public KhoaHoc(int maKhoaHoc, String tenKhoaHoc, String moTa, Date ngayBatDau, Date ngayKetThuc) {
+		super();
+		MaKhoaHoc = maKhoaHoc;
+		TenKhoaHoc = tenKhoaHoc;
+		MoTa = moTa;
+		NgayBatDau = ngayBatDau;
+		NgayKetThuc = ngayKetThuc;
+	}
+
+	public int getMaKhoaHoc() {
+		return MaKhoaHoc;
+	}
+
+	public void setMaKhoaHoc(int maKhoaHoc) {
+		MaKhoaHoc = maKhoaHoc;
+	}
+
+	public String getTenKhoaHoc() {
+		return TenKhoaHoc;
+	}
+
+	public void setTenKhoaHoc(String tenKhoaHoc) {
+		TenKhoaHoc = tenKhoaHoc;
+	}
+
+	public String getMoTa() {
+		return MoTa;
+	}
+
+	public void setMoTa(String moTa) {
+		MoTa = moTa;
+	}
+
+	public Date getNgayBatDau() {
+		return NgayBatDau;
+	}
+
+	public void setNgayBatDau(Date ngayBatDau) {
+		NgayBatDau = ngayBatDau;
+	}
+
+	public Date getNgayKetThuc() {
+		return NgayKetThuc;
+	}
+
+	public void setNgayKetThuc(Date ngayKetThuc) {
+		NgayKetThuc = ngayKetThuc;
+	}
+    
+    
 }
