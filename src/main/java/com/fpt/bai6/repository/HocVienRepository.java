@@ -1,8 +1,14 @@
 package com.fpt.bai6.repository;
 
 import com.fpt.bai6.model.HocVien;
+import com.fpt.bai6.model.KhoaHoc;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
 import java.util.Map;
 
@@ -17,6 +23,7 @@ import java.util.Map;
 //của câu truy vấn SQL, 
 //với khóa là tên cột và giá trị là giá trị tương ứng của cột đó.
 
+@Repository
 public interface HocVienRepository extends JpaRepository<HocVien, Long> {
     @Query(value = "SELECT " +
             "kh.MaKhoaHoc, kh.TenKhoaHoc, kh.MoTa, kh.NgayBatDau, kh.NgayKetThuc, " +

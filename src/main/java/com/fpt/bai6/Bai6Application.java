@@ -9,7 +9,8 @@ import org.springframework.context.annotation.ComponentScan;
 	    "com.fpt.bai6.controller",
 	    "com.fpt.bai6.repository",
 	    "com.fpt.bai6.service",
-	    "com.fpt.bai6.model"
+	    "com.fpt.bai6.model",
+	    "com.fpt.bai6.config"
 	})
 
 public class Bai6Application {

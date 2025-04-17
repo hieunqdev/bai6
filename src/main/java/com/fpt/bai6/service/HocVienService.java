@@ -4,9 +4,14 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import com.fpt.bai6.model.KhoaHoc;
 import com.fpt.bai6.repository.HocVienRepository;
+import com.fpt.bai6.repository.KhoaHocRepository;
 
 
 //Dòng này: Định nghĩa phương thức getAllHocVien, trả về một danh sách các 
@@ -17,6 +22,9 @@ import com.fpt.bai6.repository.HocVienRepository;
 public class HocVienService {
 	@Autowired
     private HocVienRepository hocVienRepository;
+	
+	@Autowired
+	private KhoaHocRepository khoaHocRepository;
 
 	public List<Map<String, Object>> getAllHocVien() {
         return hocVienRepository.findHocVien();
